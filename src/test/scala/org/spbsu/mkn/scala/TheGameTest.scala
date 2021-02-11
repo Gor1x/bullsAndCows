@@ -9,7 +9,6 @@ class TheGameTest extends AnyFunSuite {
   test("number is generated with given length") {
     assert(generateNumberString(0).isEmpty)
     assert(generateNumberString(1).length == 1)
-    assert(generateNumberString(10).length == 10)
   }
 
   test("generated number has all unique digits") {
