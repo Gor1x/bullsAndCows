@@ -26,7 +26,7 @@ object TheGame {
 
   def validate(secret: String, userInput: String, numTries: Int = 1): GuessResult = if (secret.length != userInput.length)
     throw new WrongNumberLengthException(secret.length, userInput.length)
-  else if (secret.toSet.size != secret.length)
+  else if (userInput.toSet.size != userInput.length)
     throw new RepeatingDigitsException
   else if (secret == userInput)
     Correct(numTries)
